@@ -53,7 +53,7 @@ const Location = () => {
   return (
     <Container>
       <Fade delay={500} bottom cascase>
-        <Title>오 / 시 / 는 / 길</Title>
+        <Title>{'= LOCATION ='}</Title>
       </Fade>
       <Divider />
       <Map
@@ -266,6 +266,7 @@ const ComeOnBox = styled.div`
   line-height: 2.5vh;
   padding: 0 10px;
   height: 20vh;
+  border-bottom: 1px solid rgba(157, 126, 95, 0.3);
 `;
 
 export default Location;
