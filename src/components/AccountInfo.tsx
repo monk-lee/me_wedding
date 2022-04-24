@@ -23,8 +23,28 @@ const AccountInfo = () => {
     }
   };
 
+  const accInfoChanArr = useMemo(
+    () => [
+      {
+        bankName: '농협은행',
+        bankNumber: '204011-52-032787',
+        rule: '어머니',
+        name: '장인태',
+        isPay: false,
+      },
+    ],
+    [],
+  );
+
   const accInfoRangArr = useMemo(
     () => [
+      {
+        bankName: '카카오뱅크',
+        bankNumber: '3333-13-2995153',
+        rule: '신부',
+        name: '이하랑',
+        isPay: true,
+      },
       {
         bankName: '신한은행',
         bankNumber: '110-004-140994',
@@ -36,13 +56,6 @@ const AccountInfo = () => {
         bankNumber: '204011-56-061885',
         rule: '어머니',
         name: '이희숙',
-      },
-      {
-        bankName: '카카오뱅크',
-        bankNumber: '3333-13-2995153',
-        rule: '신부',
-        name: '이하랑',
-        isPay: true,
       },
     ],
     [],
@@ -75,15 +88,74 @@ const AccountInfo = () => {
         </Fade>
       </CovidContainer>
       <Divider />
-      <Accodion>
+      <Accodion
+        style={{ backgroundColor: '#edeef1', border: '1px solid #d7dae3' }}
+      >
         <details>
-          <Summary>
-            신랑측
-            <IoChevronDown />
-          </Summary>
+          <Summary>신랑측</Summary>
+          {accInfoChanArr.map((item, index) => {
+            return (
+              <AccountContainer
+                style={{ margin: index === 1 ? '30px 0' : 0 }}
+                key={`chan_${index}`}
+              >
+                <Fade delay={500} bottom>
+                  <AccountTop>
+                    <div>
+                      <PText>{item.bankName}</PText>
+                      <PText>{item.bankNumber}</PText>
+                    </div>
+                    <div>
+                      <PText style={{ fontSize: '1.5vh', textAlign: 'right' }}>
+                        {item.rule}
+                      </PText>
+                      <PText>{item.name}</PText>
+                    </div>
+                  </AccountTop>
+                  <AccountBottom>
+                    {item.isPay && (
+                      <PayBox
+                        href="https://qr.kakaopay.com/Ej7wejp0v"
+                        target="_blank"
+                        onClick={() => {
+                          if (process.env.NODE_ENV === 'production') {
+                            ReactGA.event({
+                              category: '카카오페이',
+                              action: '클릭',
+                            });
+                          }
+                        }}
+                      >
+                        <PText>카카오페이 송금</PText>
+                      </PayBox>
+                    )}
+                    <CopyBox
+                      onClick={() =>
+                        _onCopyClipboard(item.bankNumber.replaceAll('-', ''))
+                      }
+                    >
+                      <PText>
+                        <FaRegCopy size="1.5vh" /> 계좌번호 복사
+                      </PText>
+                    </CopyBox>
+                  </AccountBottom>
+                </Fade>
+              </AccountContainer>
+            );
+          })}
+        </details>
+      </Accodion>
+      <Accodion
+        style={{ backgroundColor: '#f1edee', border: '1px solid #e5d5da' }}
+      >
+        <details>
+          <Summary>신부측</Summary>
           {accInfoRangArr.map((item, index) => {
             return (
-              <AccountContainer>
+              <AccountContainer
+                style={{ margin: index === 1 ? '30px 0' : 0 }}
+                key={`rang_${index}`}
+              >
                 <Fade delay={500} bottom>
                   <AccountTop>
                     <div>
@@ -183,6 +255,8 @@ const Summary = styled.summary`
   font-weight: bold;
   border: none;
   outline: none;
+
+  cursor: pointer;
 `;
 
 const AccountContainer = styled.div`
@@ -190,7 +264,6 @@ const AccountContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-bottom: 30px;
   padding: 15px;
   border: 1px solid rgba(157, 126, 95, 0.3);
   border-radius: 10px;
@@ -230,18 +303,16 @@ const Accodion = styled.div`
   flex-direction: column;
   justify-content: center;
   width: 85%;
-  background-color: #edeef1;
-  border: 1px solid #d7dae3;
+
+  margin-bottom: 15px;
 
   details {
     transition: height 0.5s ease;
     overflow: hidden;
   }
 
-  details[open] {
-    svg {
-      transform: rotate(180deg);
-    }
+  details summary::marker {
+    font-size: 0;
   }
 `;
 
