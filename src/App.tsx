@@ -15,6 +15,7 @@ import Gallery from './components/Gallery';
 import PhoneCall from './components/PhoneCall';
 import RightSection from './components/RightSection';
 import AccountInfo from './components/AccountInfo';
+import GuestBook from './components/GuestBook';
 import Location from './components/Location';
 import ThanksTo from './components/ThanksTo';
 import CopyRight from './components/CopyRight';
@@ -102,12 +103,13 @@ const App = () => {
           <WelcomeArea />
           <Hello />
           <MyCalendar />
-          {/* <Gallery /> */}
-          <PhoneCall />
+          <Gallery />
           <AccountInfo />
+          <PhoneCall />
+          <GuestBook />
           <Location />
           <ThanksTo />
-          <CopyRight />
+          {/* <CopyRight /> */}
         </RightSection>
         <Footer />
       </Container>
