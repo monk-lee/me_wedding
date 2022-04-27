@@ -68,7 +68,7 @@ const App = () => {
   }, [nextTickAnimation]);
 
   useEffect(() => {
-    const TRACKING_ID = 'G-X37BPW5SP9';
+    const TRACKING_ID = 'G-LQ48JC6RW5';
 
     if (process.env.NODE_ENV === 'production') {
       ReactGA.initialize(TRACKING_ID);
