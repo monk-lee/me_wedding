@@ -8,24 +8,13 @@ const ThanksTo = () => {
     <Container>
       <WelcomeAreaTop>
         <WeddingText style={{ fontSize: '2vh' }}>
-          <Fade delay={1000} top cascase>
-            우연이라기엔 인연 같고,
-          </Fade>
+          예쁜 예감이 들었다.
         </WeddingText>
         <WeddingText style={{ fontSize: '2vh' }}>
-          <Fade delay={1000} top cascase>
-            인연이라기엔 너무 찰나 같은 순간
-          </Fade>
+          우리는 언제나 손을 잡고 있게 될 것이다.
         </WeddingText>
         <WeddingText style={{ fontSize: '2vh' }}>
-          <Fade delay={1000} top cascase>
-            나는 너를 만나 사랑하게 되었다.
-          </Fade>
-        </WeddingText>
-        <WeddingText style={{ fontSize: '2vh' }}>
-          <Fade delay={1000} top cascase>
-            설레는 첫 마음 그대로 평생 간직하며 살겠습니다.
-          </Fade>
+          {'-이이체<연인>-'}
         </WeddingText>
       </WelcomeAreaTop>
       <footer>
@@ -42,7 +31,7 @@ const Container = styled.div`
   align-items: center;
   position: relative;
   height: ${window.innerHeight - 50}px;
-  padding-top: 4.5vh;
+  padding-top: 6vh;
   padding-bottom: 3vh;
   background-image: url(${FOOTER_IMAGE});
   background-position: top;
