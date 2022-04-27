@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import ImageMasonry from 'react-image-masonry';
 import Fade from 'react-reveal/Fade';
 import ReactGA from 'react-ga4';
-import ImageGallery, { ReactImageGalleryItem } from 'react-image-gallery';
+import { ReactImageGalleryItem } from 'react-image-gallery';
 
 import Lightbox from 'react-image-lightbox';
 
@@ -30,7 +30,8 @@ import P from '../assets/images/gallery_16.jpg';
 import Q from '../assets/images/gallery_17.jpg';
 import R from '../assets/images/gallery_18.jpg';
 import S from '../assets/images/gallery_19.jpg';
-import ModalWrap from './Modal';
+import T from '../assets/images/gallery_20.jpg';
+// import ModalWrap from './Modal';
 
 const Gallery = () => {
   const imageArr = useMemo<ReactImageGalleryItem[]>(
@@ -54,6 +55,7 @@ const Gallery = () => {
       { original: Q, thumbnail: Q },
       { original: R, thumbnail: R },
       { original: S, thumbnail: S },
+      { original: T, thumbnail: T },
     ],
     [],
   );
