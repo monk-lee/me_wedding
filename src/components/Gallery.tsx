@@ -81,7 +81,7 @@ const Gallery = () => {
         <Title>{'= GALLERY ='}</Title>
       </Fade>
       <GalleryContainer>
-        <ImageMasonry numCols={3} forceOrder>
+        <ImageMasonry numCols={3}>
           {imageArr.map((imageItem, imageIndex) => {
             return (
               <div
