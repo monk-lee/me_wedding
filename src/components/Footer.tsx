@@ -57,7 +57,7 @@ const Footer = () => {
     window.Kakao.Link.sendDefault({
       objectType: 'feed',
       content: {
-        title: '우리 딸, 결혼합니다.',
+        title: '김찬혁 ♥ 이하랑, 결혼합니다.',
         description:
           '2022년 6월 26일 일요일 오전 11시\n상록아트홀 L층 그랜드볼룸',
         imageUrl: 'https://chanrang.party/1649823529761.jpg',
