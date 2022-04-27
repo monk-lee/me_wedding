@@ -70,11 +70,23 @@ const GuestBook = () => {
       </ContentTextContainer>
       <Divider />
       <Marquee speed={100} pauseOnHover gradient={false}>
-        {guestData.map((item, index) => (
-          <PText key={`guest_${index}`} style={{ marginRight: '10vh' }}>
-            {item}
-          </PText>
-        ))}
+        {guestData.length > 0 ? (
+          guestData.map((item, index) => (
+            <PText key={`guest_${index}`} style={{ marginRight: '10vh' }}>
+              {item}
+            </PText>
+          ))
+        ) : (
+          <>
+            <PText style={{ marginRight: '10vh' }}>언제나 행복하세요~~</PText>
+            <PText style={{ marginRight: '10vh' }}>
+              진짜 너무 천생연분!!! 행복하게 잘 살아~
+            </PText>
+            <PText style={{ marginRight: '10vh' }}>
+              역대급 부부의 탄생! 항상 행복하고 배려하며 사세요~
+            </PText>
+          </>
+        )}
       </Marquee>
       <Divider />
       <InputContainer>
