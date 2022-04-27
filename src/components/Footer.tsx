@@ -60,16 +60,16 @@ const Footer = () => {
         title: '우리 딸, 결혼합니다.',
         description:
           '2022년 6월 26일 일요일 오전 11시\n상록아트홀 L층 그랜드볼룸',
-        imageUrl: 'https://p.chanrang.party/1649823529761.jpg',
+        imageUrl: 'https://chanrang.party/1649823529761.jpg',
         link: {
-          mobileWebUrl: 'https://p.chanrang.party/',
+          mobileWebUrl: 'https://chanrang.party/',
         },
       },
       buttons: [
         {
           title: '청첩장 확인하기',
           link: {
-            mobileWebUrl: 'https://p.chanrang.party/',
+            mobileWebUrl: 'https://chanrang.party/',
           },
         },
       ],
