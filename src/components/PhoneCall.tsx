@@ -28,7 +28,7 @@ const PhoneCall = () => {
               if (process.env.NODE_ENV === 'production') {
                 ReactGA.event({
                   category: '전화',
-                  action: '클릭',
+                  action: '김찬혁 전화 클릭',
                   label: '김찬혁',
                 });
               }
@@ -46,7 +46,7 @@ const PhoneCall = () => {
                 if (process.env.NODE_ENV === 'production') {
                   ReactGA.event({
                     category: '전화',
-                    action: '클릭',
+                    action: '김태우 전화 클릭',
                     label: '김태우',
                   });
                 }
@@ -71,7 +71,7 @@ const PhoneCall = () => {
                 if (process.env.NODE_ENV === 'production') {
                   ReactGA.event({
                     category: '전화',
-                    action: '클릭',
+                    action: '장인태 전화 클릭',
                     label: '장인태',
                   });
                 }
@@ -93,7 +93,7 @@ const PhoneCall = () => {
               if (process.env.NODE_ENV === 'production') {
                 ReactGA.event({
                   category: '전화',
-                  action: '클릭',
+                  action: '이하랑 전화 클릭',
                   label: '이하랑',
                 });
               }
@@ -111,7 +111,7 @@ const PhoneCall = () => {
                 if (process.env.NODE_ENV === 'production') {
                   ReactGA.event({
                     category: '전화',
-                    action: '클릭',
+                    action: '이윤창 전화 클릭',
                     label: '이윤창',
                   });
                 }
@@ -136,7 +136,7 @@ const PhoneCall = () => {
                 if (process.env.NODE_ENV === 'production') {
                   ReactGA.event({
                     category: '전화',
-                    action: '클릭',
+                    action: '이희숙 전화 클릭',
                     label: '이희숙',
                   });
                 }

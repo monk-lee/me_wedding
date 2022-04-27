@@ -17,7 +17,7 @@ const AccountInfo = () => {
     if (process.env.NODE_ENV === 'production') {
       ReactGA.event({
         category: '계좌번호',
-        action: '복사',
+        action: `${text} 복사`,
         label: text,
       });
     }
@@ -128,7 +128,7 @@ const AccountInfo = () => {
                           if (process.env.NODE_ENV === 'production') {
                             ReactGA.event({
                               category: '카카오페이',
-                              action: '클릭',
+                              action: '카카오페이 클릭',
                             });
                           }
                         }}
@@ -185,7 +185,7 @@ const AccountInfo = () => {
                           if (process.env.NODE_ENV === 'production') {
                             ReactGA.event({
                               category: '카카오페이',
-                              action: '클릭',
+                              action: '카카오페이 클릭',
                             });
                           }
                         }}

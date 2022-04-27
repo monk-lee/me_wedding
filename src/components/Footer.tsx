@@ -48,7 +48,7 @@ const Footer = () => {
     if (process.env.NODE_ENV === 'production') {
       ReactGA.event({
         category: '사이트주소',
-        action: '복사',
+        action: '사이트주소 복사',
       });
     }
   };
@@ -78,7 +78,7 @@ const Footer = () => {
     if (process.env.NODE_ENV === 'production') {
       ReactGA.event({
         category: '카카오공유',
-        action: '클릭',
+        action: '카카오공유 클릭',
       });
     }
   }, []);

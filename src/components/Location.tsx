@@ -26,7 +26,7 @@ const Location = () => {
     if (process.env.NODE_ENV === 'production') {
       ReactGA.event({
         category: '주소',
-        action: '복사',
+        action: '위치 주소 복사',
       });
     }
 
@@ -44,7 +44,7 @@ const Location = () => {
     if (process.env.NODE_ENV === 'production') {
       ReactGA.event({
         category: '내비게이션',
-        action: '클릭',
+        action: '카카오내비 클릭',
         label: '카카오내비',
       });
     }
@@ -98,7 +98,7 @@ const Location = () => {
               if (process.env.NODE_ENV === 'production') {
                 ReactGA.event({
                   category: '내비게이션',
-                  action: '클릭',
+                  action: '티맵 클릭',
                   label: '티맵',
                 });
               }
@@ -119,7 +119,7 @@ const Location = () => {
               if (process.env.NODE_ENV === 'production') {
                 ReactGA.event({
                   category: '내비게이션',
-                  action: '클릭',
+                  action: '네이버지도 클릭',
                   label: '네이버지도',
                 });
               }
