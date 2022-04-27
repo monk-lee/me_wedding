@@ -26,6 +26,13 @@ const AccountInfo = () => {
   const accInfoChanArr = useMemo(
     () => [
       {
+        bankName: '국민은행',
+        bankNumber: '538402-04-011042',
+        rule: '신랑',
+        name: '김찬혁',
+        isPay: false,
+      },
+      {
         bankName: '농협은행',
         bankNumber: '204011-52-032787',
         rule: '어머니',
