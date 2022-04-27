@@ -18,7 +18,7 @@ import AccountInfo from './components/AccountInfo';
 import GuestBook from './components/GuestBook';
 import Location from './components/Location';
 import ThanksTo from './components/ThanksTo';
-import CopyRight from './components/CopyRight';
+// import CopyRight from './components/CopyRight';
 
 import useScrollTracker from './hooks/useScrollTracker';
 
