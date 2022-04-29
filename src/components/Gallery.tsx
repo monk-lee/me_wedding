@@ -95,7 +95,7 @@ const Gallery = () => {
                   if (process.env.NODE_ENV === 'production') {
                     ReactGA.event({
                       category: '갤러리',
-                      action: `gallery_${indexImage + 1} 클릭`,
+                      action: `gallery_${imageIndex + 1} 클릭`,
                       label: `gallery_${imageIndex + 1}`,
                     });
                   }
